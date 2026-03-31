@@ -215,6 +215,7 @@ GitHub Issues will be used as the primary issue tracker, leveraging labels and m
 * JB Onofré (jbonofre@apache.org)
 * François Papon (fpapon@apache.org)
 * Jarek Potiuk (potiuk@apache.org)
+* Robert Stupp (snazy@apache.org)
 
 ## Sponsors
 
