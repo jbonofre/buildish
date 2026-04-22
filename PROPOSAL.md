@@ -50,6 +50,8 @@ Apache projects share many common build requirements, but today there is no ASF 
 
 * Build tools and utilities: scripts, Java-based CLI applications, and other utilities that support building, testing, packaging, and releasing software. This may include tools for validating release candidates against ASF policies, generating changelogs, managing multi-repository release coordination, and automating dependency updates.
 
+* Reusable staging pipeline for single- or multi-repository documentation web-sites, renderer agnostic.
+
 Consolidating these resources under shared governance also creates a natural gathering point for build engineering and supply chain security expertise within the ASF, fostering cross-project collaboration and knowledge sharing. When a security issue is found in a build pattern or dependency, the fix lands in one place and reaches all consuming projects through normal version updates.
 
 ## Current Status
@@ -77,6 +79,7 @@ All initial developers have extensive experience across multiple ASF projects:
 * JB Onofre: ASF Member, PMC member and committer on numerous Apache projects including Apache Karaf, Apache Camel, Apache ActiveMQ, and the ASF Incubator. Extensive experience with Gradle, Maven, and CI/CD systems.
 * Francois Papon: ASF Member, committer on Apache Karaf and related projects. Strong background in build automation and Java ecosystem tooling.
 * Jarek Potiuk: ASF Member, committer and PMC member on Apache Airflow. Deep experience with CI/CD systems (GitHub Actions, Jenkins), Docker-based builds, and CI/CD at scale.
+* Robert Stupp: PMC member on Polaris and committer on Cassandra.  Deep experience with build systems (Gradle, Maven, et al), CI/CD systems (GitHub Actions, Jenkins), Docker-based builds, and CI/CD at scale.
 
 ### Alignment
 
@@ -148,16 +151,6 @@ There are no encumbered dependencies or IP concerns. All code was written from s
 
 Upon acceptance into the Incubator, the source code will be migrated to https://github.com/apache/buildish.
 
-## External Dependencies
-
-All external dependencies are compatible with the Apache License 2.0.
-
-| Dependency | License | Purpose |
-|---|---|---|
-| Apache Log4j | Apache License 2.0 | Logging framework |
-
-All new dependencies will be reviewed for license compatibility before inclusion, following the ASF's third-party licensing policy.
-
 ## Required Resources
 
 ### Mailing Lists
@@ -170,7 +163,7 @@ All new dependencies will be reviewed for license compatibility before inclusion
 
 https://github.com/apache/buildish
 
-The project will use a single mono-repository for all components. Individual components will be published as separate artifacts.
+The project will initially use this repository. Individual components will be published as separate artifacts.
 
 ### Issue Tracking
 
